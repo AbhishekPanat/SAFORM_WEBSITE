@@ -239,15 +239,76 @@ a {
   height: 40px;
   width: 40px;
 }
+    .dropdown-item.active,
+    .dropdown-item:active {
+      background-color: #697b80 !important;
+    }
 
+    .NavFont {
+      font-weight: bold !important;
+    }
+
+    Smooth {
+      scroll-behavior: smooth !important;
+    }
+    .search-icon {
+      font-size: 18px;
+      color: dimgray;
+      background-color: #eee;
+      border: 0;
+      outline: none;
+      margin-top: 18px;
+    }
+
+    .search-toggle .search-icon.icon-close {
+      display: none;
+    }
+    .search-toggle.opened .search-icon.icon-search {
+      display: none;
+    }
+    .search-toggle.opened .search-icon.icon-close {
+      display: block;
+    }
+
+    .search-container {
+      position: relative;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      max-height: 0;
+      overflow: hidden;
+      background-color: #eee;
+    }
+    .search-container.opened {
+      max-height: 100px;
+    }
+    .search-container input[type="text"] {
+      outline: none;
+      font-size: 1rem;
+      margin: 5px;
+      width: 245px;
+      background-color: inherit;
+      border: 0;
+    }
+    .search-container .search-icon {
+      vertical-align: middle;
+    }
+
+    .search-container {
+      position: absolute;
+      right: 75px;
+      top: 65px;
+    }
     </style>
   </head>
   <body>
     
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
-        <a class="navbar-brand" href="index.html">SOFOAM</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+          aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
   
@@ -257,37 +318,155 @@ a {
             <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
             <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
             <li class="nav-item"><a href="event.html" class="nav-link">Events</a></li> -->
-            <li class="nav-item"><a href="Default.html" class="nav-link">ABOUT SAFOAM</a></li>
+            <!-- About Us -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="Default.html" role="button" aria-expanded="false">SAR</a>
+              <a class="nav-link NavFont dropdown-toggle" data-toggle="dropdown" href="Default.html" role="button"
+                aria-expanded="false">About Us</a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="Default.html" target="_blank">Chapter of SAFOAM</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Agroclimatic Research</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Tools for Operational Agro</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Economic Assessment of AAS</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Publication/Books</a>
+                <a class="dropdown-item" href="Background.html" target="_blank">Background</a>
+                <a class="dropdown-item" href="Constitution.html" target="_blank">Constitution</a>
+                <a class="dropdown-item" href="Message_MS.html" target="_blank">Message from Prof M.S Swaminathan</a>
+            </li>
+            <!-- Member Countries -->
+            <li class="nav-item dropdown">
+              <a class="nav-link NavFont dropdown-toggle" data-toggle="dropdown" href="Default.html" role="button"
+                aria-expanded="false">Member Countries</a>
+              <div class="dropdown-menu row">
+  
+                <a class="dropdown-item" href="Default.html" target="_blank">India</a>
+                <a class="dropdown-item" href="Default.html" target="_blank">Afghanistan</a>
+                <a class="dropdown-item" href="Default.html" target="_blank">Bangladesh</a>
+                <a class="dropdown-item" href="Default.html" target="_blank">Bhutan</a>
+                <a class="dropdown-item" href="Default.html" target="_blank">Maldives</a>
+                <a class="dropdown-item" href="Default.html" target="_blank">Myanmar</a>
+                <a class="dropdown-item" href="Default.html" target="_blank">Nepal</a>
+                <a class="dropdown-item" href="Default.html" target="_blank">Pakistan</a>
+                <a class="dropdown-item" href="Default.html" target="_blank">Srilanka</a>
+  
+              </div>
+            </li>
+            <!-- committee -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle NavFont" data-toggle="dropdown" href="Default.html" role="button"
+                aria-expanded="false">Committee</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="Contact.html" target="_blank">Founding Members</a>
+                <a class="dropdown-item" href="Background.html" target="_blank">Executive Council</a>
+                <a class="dropdown-item" href="Default.html" target="_blank">Implementation Commity</a>
+                <a class="dropdown-item" href="Default.html" target="_blank">Members From Different Country</a>
                 <!-- <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Separated link</a>
               </div> -->
-            </li><li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="Default.html" role="button" aria-expanded="false">STANDARD AGROMET ADVISORIES</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="Default.html" target="_blank">Flood</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Cyclone</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Heavy Rain</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Cold</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Heat Waves</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Hailstrom</a>
             </li>
+            <!-- Activities -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="Default.html" role="button" aria-expanded="false">AWARD OF FELLOWSHIPS</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="Default.html" target="_blank">Proposed Activities 2021-22</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Proposed Activities 2022-23</a>
+              <a class="nav-link dropdown-toggle NavFont" data-toggle="dropdown" href="Default.html" role="button"
+                aria-expanded="false">Activities</a>
+              <div class="dropdown-menu" style="width: 60rem; top: 80%; left: -40rem;">
+                <div class="row">
+                  <div class="col-md-4">
+                    <H3>Implementation Stragies</H3>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link1</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link2</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link3</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link4</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link5</a>
+                  </div>
+                  <div class="col-md-4">
+                    <H3>Agrometrological Activities In The Region</H3>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link1</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link2</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link3</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link4</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link5</a>
+                  </div>
+                  <div class="col-md-4">
+                    <H3>Crop/Pest Weather Relationship Calender</H3>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link1</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link2</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link3</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link4</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link5</a>
+                  </div>
+                  <div class="col-md-4">
+                    <H3>Tools For Operational Agrometeorology</H3>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link1</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link2</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link3</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link4</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link5</a>
+                  </div>
+                  <div class="col-md-4">
+                    <H3>Workshops </H3>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Webiners</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Seminars</a>
+                  </div>
+                  <div class="col-md-4">
+                    <H3>New Initiatives </H3>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link1</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link2</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link3</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link4</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link5</a>
+                  </div>
+                </div>
+  
             </li>
+            <!-- <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+              </div> -->
+            <!-- Others -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="Default.html" role="button" aria-expanded="false">FAQ</a>
+              <a class="nav-link dropdown-toggle NavFont" data-toggle="dropdown" href="Default.html" role="button"
+                aria-expanded="false">Others</a>
+                <div class="dropdown-menu" style="width: 60rem; top: 80%; left: -40rem;">
+                <div class="row">
+                  <div class="col-md-4">
+                    <H3>Multimedia</H3>
+                    <a class="dropdown-item" href="Default.html" target="_blank">News Paper Articals</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Photo Gallery</a>
+                  </div>
+                  <div class="col-md-4">
+                    <H3>Publication</H3>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Books</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">scientific Papers</a>
+                  </div>
+                  <div class="col-md-4">
+                    <H3>Achivements</H3>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Success Story</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Feedback</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Economic Assessment</a>
+                  </div>
+                  <div class="col-md-4">
+                    <H3>Archive</H3>
+                    <a class="dropdown-item" href="Default.html" target="_blank">News</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Products</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Human Resource Development</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Bulletins</a>
+                  </div>
+                  <div class="col-md-4">
+                    <H3>National Methodology Service</H3>
+                    <a class="dropdown-item" href="Default.html" target="_blank">India</a>
+                  </div>
+                </div>
+  
             </li>
+            <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+            <li class="nav-item">
+              <div class="container" style="margin-top: 14px;">
+                <div class="search-toggle">
+                  <button class="search-icon icon-search"><i class="fa fa-fw fa-search"></i></button>
+                  <button class="search-icon icon-close"><i class="fa fa-fw  fa-close"></i></button>
+                </div>
+                <div class="search-container">
+                  <form>
+                    <input type="text" name="q" id="search-terms" placeholder="Search terms..." />
+                    <button type="submit" name="submit" value="Go" class="search-icon"><i class="fa fa-fw fa-search"></i></button>
+                  </form>
+                </div>
+              </div>
+            </li>
+  
             <!-- <li class="nav-item"><a href="blog.html" class="nav-link"></a></li>
             <li class="nav-item"><a href="contact.html" class="nav-link"></a></li> -->
           </ul>
@@ -478,11 +657,27 @@ a {
 
     function handleSignUpBtn()
     {
-      // alert('hi');
+      $('#container').addClass("right-panel-active");
+      //alert('hi');
       const container = document.getElementById("container");      
       container.classList.add("right-panel-active");
     }
 
+  </script>
+  <script type="text/javascript">
+    $(".search-toggle").addClass("closed");
+  
+    $(".search-toggle .search-icon").click(function (e) {
+      if ($(".search-toggle").hasClass("closed")) {
+        $(".search-toggle").removeClass("closed").addClass("opened");
+        $(".search-toggle, .search-container").addClass("opened");
+        $("#search-terms").focus();
+      } else {
+        $(".search-toggle").removeClass("opened").addClass("closed");
+        $(".search-toggle, .search-container").removeClass("opened");
+      }
+    });
+  
   </script>  
   </body>
 </html>
