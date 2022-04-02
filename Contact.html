@@ -27,21 +27,76 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-      .dropdown-item.active, .dropdown-item:active {
-      background-color: #697b80 !important ;
+      .dropdown-item.active,
+      .dropdown-item:active {
+        background-color: #697b80 !important;
       }
-      .NavFont{
+  
+      .NavFont {
         font-weight: bold !important;
       }
   
-      </style>
+      Smooth {
+        scroll-behavior: smooth !important;
+      }
+      .search-icon {
+        font-size: 18px;
+        color: dimgray;
+        background-color: #eee;
+        border: 0;
+        outline: none;
+        margin-top: 18px;
+      }
+  
+      .search-toggle .search-icon.icon-close {
+        display: none;
+      }
+      .search-toggle.opened .search-icon.icon-search {
+        display: none;
+      }
+      .search-toggle.opened .search-icon.icon-close {
+        display: block;
+      }
+  
+      .search-container {
+        position: relative;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        max-height: 0;
+        overflow: hidden;
+        background-color: #eee;
+      }
+      .search-container.opened {
+        max-height: 100px;
+      }
+      .search-container input[type="text"] {
+        outline: none;
+        font-size: 1rem;
+        margin: 5px;
+        width: 245px;
+        background-color: inherit;
+        border: 0;
+      }
+      .search-container .search-icon {
+        vertical-align: middle;
+      }
+  
+      .search-container {
+        position: absolute;
+        right: 75px;
+        top: 65px;
+      }
+    </style>
   </head>
   <body>
     
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar"> 
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
-        <a class="navbar-brand" href="index.html">SAFOAM</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+          aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
   
@@ -51,48 +106,151 @@
             <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
             <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
             <li class="nav-item"><a href="event.html" class="nav-link">Events</a></li> -->
-            <li class="nav-item"><a href="Default.html" class="nav-link NavFont">ABOUT SAFOAM</a></li>
+            <!-- About Us -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle NavFont" data-toggle="dropdown" href="Default.html" role="button" aria-expanded="false">SAR</a>
+              <a class="nav-link NavFont dropdown-toggle" data-toggle="dropdown" href="Default.html" role="button"
+                aria-expanded="false">About Us</a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="Default.html" target="_blank">Chapter of SAFOAM</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Agroclimatic Research</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Tools for Operational Agro</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Economic Assessment of AAS</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Publication/Books</a>
-                <!-- <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Separated link</a>
-              </div> -->
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link NavFont dropdown-toggle" data-toggle="dropdown" href="Default.html" role="button" aria-expanded="false">STANDARD AGROMET ADVISORIES</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="Default.html" target="_blank">Flood</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Cyclone</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Heavy Rain</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Cold</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Heat Waves</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Hailstrom</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link NavFont dropdown-toggle" data-toggle="dropdown" href="Default.html" role="button" aria-expanded="false">AWARD OF FELLOWSHIPS</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="Default.html" target="_blank">Proposed Activities 2021-22</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Proposed Activities 2022-23</a>
-            </li>
-            <li class="nav-item"><a href="Default.html" class="nav-link NavFont">FAQ</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle NavFont" data-toggle="dropdown" href="Default.html" role="button" aria-expanded="false">TEMP</a>
-              <div class="dropdown-menu">
+                <a class="dropdown-item" href="Background.html" target="_blank">Background</a>
+                <a class="dropdown-item" href="pdf/Constitution.pdf" target="_blank">Constitution</a>
+                <a class="dropdown-item" href="pdf/Information_Brochure.pdf" target="_blank">Information Brochure</a>
+                <a class="dropdown-item" href="Message_MS.html" target="_blank">Message from Prof M.S Swaminathan</a>
                 <a class="dropdown-item" href="Contact.html" target="_blank">Contact Us</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Background & Objectives of SAFOAM</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Brief Resume of the Founding Members of SAFOAM_9-11-21</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Economic Assessment of AAS</a>
-                <a class="dropdown-item" href="Default.html" target="_blank">Publication/Books</a>
+                
+  
+            </li>
+            <!-- Member Countries -->
+            <li class="nav-item dropdown">
+              <a class="nav-link NavFont dropdown-toggle" data-toggle="dropdown" href="Default.html" role="button"
+                aria-expanded="false">Member Countries</a>
+              <div class="dropdown-menu row">
+  
+                <a class="dropdown-item" href="pdf/member_countries/India.pdf" target="_blank">India</a>
+                <a class="dropdown-item" href="pdf/member_countries/Afghanistan.pdf" target="_blank">Afghanistan</a>
+                <a class="dropdown-item" href="pdf/member_countries/Bangladesh.pdf" target="_blank">Bangladesh</a>
+                <a class="dropdown-item" href="pdf/member_countries/Bhutan.pdf" target="_blank">Bhutan</a>
+                <a class="dropdown-item" href="pdf/member_countries/Maldives.pdf" target="_blank">Maldives</a>
+                <a class="dropdown-item" href="pdf/member_countries/Myanmar.pdf" target="_blank">Myanmar</a>
+                <a class="dropdown-item" href="pdf/member_countries/Nepal.pdf" target="_blank">Nepal</a>
+                <a class="dropdown-item" href="pdf/member_countries/Pakistan.pdf" target="_blank">Pakistan</a>
+                <a class="dropdown-item" href="pdf/member_countries/Sri_Lanka.pdf" target="_blank">Srilanka</a>
+  
+              </div>
+            </li>
+            <!-- committee -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle NavFont" data-toggle="dropdown" href="Default.html" role="button"
+                aria-expanded="false">Committee</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="pdf/Founding_Members.pdf" target="_blank">Founding Members</a>
+                <a class="dropdown-item" href="Background.html" target="_blank">Executive Council</a>
+                <a class="dropdown-item" href="Default.html" target="_blank">Implementation Commity</a>
+                <a class="dropdown-item" href="Default.html" target="_blank">Members From Different Country</a>
                 <!-- <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Separated link</a>
               </div> -->
             </li>
+            <!-- Activities -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle NavFont" data-toggle="dropdown" href="Default.html" role="button"
+                aria-expanded="false">Activities</a>
+              <div class="dropdown-menu" style="width: 60rem; top: 80%; left: -40rem;padding: 1rem 2.5rem;">
+                <div class="row">
+                  <div class="col-md-4">
+                    <H3>Implementation Strategies</H3>
+                    <a class="dropdown-item" href="pdf/Implementation Strategies/Agricultural Marketing.pdf" target="_blank">Agricultural Marketing</a>
+                    <a class="dropdown-item" href="pdf/Implementation Strategies/Capacity Building.pdf" target="_blank">Capacity Building</a>
+                    <a class="dropdown-item" href="pdf/Implementation Strategies/Education.pdf" target="_blank">Education</a>
+                    <a class="dropdown-item" href="pdf/Implementation Strategies/Hill Development.pdf" target="_blank">Hill Development</a>
+                    <a class="dropdown-item" href="pdf/Implementation Strategies/Information Communication Technology.pdf" target="_blank">Information Communication Technology</a>
+                  </div>
+                  <div class="col-md-4">
+                    <H3>Agrometrological Activities In The Region</H3>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link1</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link2</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link3</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link4</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Link5</a>
+                  </div>
+                  <div class="col-md-4">
+                    <H3>Crop/Pest Weather Relationship Calender</H3>
+                    <a class="dropdown-item" href="pdf/Crop_Weather_Calendar.pdf" target="_blank">Crop Weather Calendar</a>
+                    <a class="dropdown-item" href="pdf/Pest_Weather_Relation.pdf" target="_blank">Pest Weather Relation</a>
+                  </div>
+                  <div class="col-md-4">
+                    <H3>Agromet products </H3>
+                    <a class="dropdown-item" href="pdf/Agromet_Advisory_Services.pdf" target="_blank">Agromet Advisory Services</a>
+                  </div>
+                  <div class="col-md-4">
+                    <H3>Workshops </H3>
+                    <a class="dropdown-item" href="pdf/Webinar_Workshop.pdf" target="_blank">Webiners</a>
+                    <a class="dropdown-item" href="Default.html" target="_blank">Seminars</a>
+                    <a class="dropdown-item" href="pdf/proceedings.pdf" target="_blank">Proceedings</a>
+                  </div>
+                  <div class="col-md-4">
+                    <H3>New Initiatives </H3>
+                    <a class="dropdown-item" href="pdf/New_Initiatives.pdf" target="_blank">Initiatives</a>
+                  </div>
+                </div>
+  
+            </li>
+            <!-- <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+              </div> -->
+            <!-- Others -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle NavFont" data-toggle="dropdown" href="Default.html" role="button"
+                aria-expanded="false">Others</a>
+                <div class="dropdown-menu" style="width: 60rem; top: 80%; left: -40rem;padding: 1rem 2.5rem">
+                <div class="row">
+                  <div class="col-md-4">
+                    <H3>Multimedia</H3>
+                    <a class="dropdown-item" href="Default.html" target="_blank">News Paper Articals</a>
+                    <a class="dropdown-item" href="index.html#photoGallery">Photo Gallery</a>
+                    <a class="dropdown-item" href="pdf/Videos_SAFOAM.pdf" target="_blank">Videos of SAFOAM</a>
+                  </div>
+                  <div class="col-md-4">
+                    <H3>Publication</H3>
+                    <a class="dropdown-item" href="pdf/Implementation Strategies/Publication.pdf" target="_blank">Books</a>
+                    <a class="dropdown-item" href="#" target="_blank">scientific Papers</a>
+                    <a class="dropdown-item" href="pdf/Implementation Strategies/Research.pdf" target="_blank">Research</a>
+                  </div>
+                  <div class="col-md-4">
+                    <H3>Achivements</H3>
+                    <a class="dropdown-item" href="pdf/success_stories.pdf" target="_blank">Success Story</a>
+                    <a class="dropdown-item" href="pdf/Feedback.pdf" target="_blank">Feedback</a>
+                    <a class="dropdown-item" href="pdf/Economic_Assessment.pdf" target="_blank">Economic Assessment</a>
+                  </div>
+                  <div class="col-md-4">
+                    <H3>Archive</H3>
+                    <a class="dropdown-item" href="News-Detail.html" target="_blank">News</a>
+                    <a class="dropdown-item" href="Products.html" target="_blank">Products</a>
+                    <a class="dropdown-item" href="HumanResourceDevelopment.html" target="_blank">Human Resource Development</a>
+                    <a class="dropdown-item" href="Bulletins.html" target="_blank">Bulletins</a>
+                  </div>
+                  <div class="col-md-4">
+                    <H3>National Methodology Service</H3>
+                    <a class="dropdown-item" href="Default.html" target="_blank">India</a>
+                  </div>
+                </div>
+  
+            </li>
+            <li class="nav-item"><a href="Login.html" class="nav-link">Login</a></li>
+            <li class="nav-item">
+              <div class="container">
+                <div class="search-toggle">
+                  <button class="search-icon icon-search"><i class="fa fa-fw fa-search"></i></button>
+                  <button class="search-icon icon-close"><i class="fa fa-fw  fa-close"></i></button>
+                </div>
+                <div class="search-container">
+                  <form>
+                    <input type="text" name="q" id="search-terms" placeholder="Search terms..." />
+                    <button type="submit" name="submit" value="Go" class="search-icon"><i class="fa fa-fw fa-search"></i></button>
+                  </form>
+                </div>
+              </div>
+            </li>
+  
             <!-- <li class="nav-item"><a href="blog.html" class="nav-link"></a></li>
             <li class="nav-item"><a href="contact.html" class="nav-link"></a></li> -->
           </ul>
@@ -134,7 +292,7 @@
             <p><span>Website</span> <a href="index.html">SAFOAM</a></p>
           </div>
         </div>
-        <div class="row block-9">
+        <!-- <div class="row block-9">
           <div class="col-md-6 pr-md-5">
           	<h4 class="mb-4">Do you have any questions?</h4>
             <form action="#">
@@ -158,18 +316,19 @@
           </div>
 
           <div class="col-md-6" id="map"></div>
-        </div>
+        </div> -->
       </div>
     </section>
 
     <footer class="ftco-footer ftco-section img">
-    	<div class="overlay"></div>
+      <div class="overlay"></div>
       <div class="container">
         <div class="row mb-5">
-          <div class="col-md-3">
+          <div class="col-md-2">
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">About Us</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+                blind texts.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -177,66 +336,65 @@
               </ul>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Recent Blog</h2>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
+  
+          <div class="col-md-7">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <div class="row">
+                <div class="col-md-4">
+                  <h2 class="ftco-heading-2">Site Links</h2>
+                    <ul class="list-unstyled">
+                      <li><a href="Background.html" class="py-2 d-block">Background</a></li>
+                      <li><a href="pdf/Constitution.pdf" class="py-2 d-block">Constitution</a></li>
+                      <li><a href="pdf/Information_Brochure.pdf" class="py-2 d-block">Information Brochure</a></li>
+                      <li><a href="Message_MS.html" class="py-2 d-block">Message from Prof M.S Swaminathan</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                  <h2 class="ftco-heading-2">Member Countries</h2>
+                    <ul class="list-unstyled">
+                      <li><a href="pdf/member_countries/India.pdf" class="py-2 d-block">India</a></li>
+                      <li><a href="pdf/member_countries/Afghanistan.pdf" class="py-2 d-block">Afghanistan</a></li>
+                      <li><a href="pdf/member_countries/Bangladesh.pdf" class="py-2 d-block">Bangladesh</a></li>
+                      <li><a href="pdf/member_countries/Bhutan.pdf" class="py-2 d-block">Bhutan</a></li>
+                      <li><a href="pdf/member_countries/Maldives.pdf" class="py-2 d-block">Maldives</a></li>
+                      <li><a href="pdf/member_countries/Myanmar.pdf" class="py-2 d-block">Myanmar</a></li>
+                      <li><a href="pdf/member_countries/Nepal.pdf" class="py-2 d-block">Nepal</a></li>
+                      <li><a href="pdf/member_countries/Pakistan.pdf" class="py-2 d-block">Pakistan</a></li>
+                      <li><a href="pdf/member_countries/Sri_Lanka.pdf" class="py-2 d-block">Sri Lanka</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                  <h2 class="ftco-heading-2">Committee</h2>
+                    <ul class="list-unstyled">
+                      <li><a href="pdf/Founding_Members.pdf" class="py-2 d-block">Founding Members</a></li>
+                      <li><a href="#" class="py-2 d-block">Executive Council</a></li>
+                      <li><a href="#" class="py-2 d-block">Implementation Community</a></li>
+                      <li><a href="#" class="py-2 d-block">Members from different countries</a></li>
+                    </ul>
                 </div>
               </div>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2">
-             <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Site Links</h2>
-              <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">ABOUT SAFOAM</a></li>
-                <li><a href="#" class="py-2 d-block">SAR</a></li>
-                <li><a href="#" class="py-2 d-block">STANDARD AGROMET ADVISORIES</a></li>
-                <li><a href="#" class="py-2 d-block">AWARD OF FELLOWSHIPS</a></li>
-              </ul>
             </div>
           </div>
           <div class="col-md-3">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">Pune, India</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 1111111111</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-	              </ul>
-	            </div>
+              <h2 class="ftco-heading-2">Have a Questions?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><span class="icon icon-map-marker"></span><span class="text">Comming Soon</span></li>
+                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 9225569519</span></a></li>
+                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">SAFOAM2021@gmail.com</span></a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-
             <p> Designed by Harsh Chauhan & Abhishek Panat<a href="#" target="_blank"></a></p>
           </div>
         </div>
       </div>
     </footer>
-    
   
 
   <!-- loader -->
@@ -260,6 +418,20 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
+  <script type="text/javascript">
+    $(".search-toggle").addClass("closed");
+  
+    $(".search-toggle .search-icon").click(function (e) {
+      if ($(".search-toggle").hasClass("closed")) {
+        $(".search-toggle").removeClass("closed").addClass("opened");
+        $(".search-toggle, .search-container").addClass("opened");
+        $("#search-terms").focus();
+      } else {
+        $(".search-toggle").removeClass("opened").addClass("closed");
+        $(".search-toggle, .search-container").removeClass("opened");
+      }
+    });
+  
+  </script>
   </body>
 </html>
